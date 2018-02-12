@@ -2,7 +2,7 @@ function getDateAndTime() {
 	let currDate = new Date();
 	let dateArr = String(currDate).split(" "),
 		timeArr = dateArr[4].split(":");
-	return [dateArr[1] + dateArr[3], dateArr[0] + dateArr[2], getTime(currDate)]
+	return [dateArr[1] + " " + dateArr[3], dateArr[0] + " " + dateArr[2], getTime(currDate)]
 }
 
 function getTime(date) {
@@ -12,10 +12,17 @@ function getTime(date) {
 		day = true;
 	if(currHour == 0) currHour += 12;
 	else if(currHour > 12) {
-		currHour -= (currHour - 12);
+		currHour -= 12;
 		day = false;
 	}
 	return currHour + ":" + (currMinutes < 10 ? "0" + currMinutes : currMinutes) + (day ? "am" : "pm");
+}
+
+function searchRequest(e) {
+	if(e.keyCode == 13) {
+		window.open("https://www.google.com/search?q=" + document.getElementById("search").value);
+		document.getElementById("search").value = "";
+	}
 }
 
 window.onload = () => {

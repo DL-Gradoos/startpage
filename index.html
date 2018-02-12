@@ -7,22 +7,60 @@
 		<title>Start</title>
 		<link rel="stylesheet" href="css/style.css" />
 		<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-		
 		<script src="js/info.js"></script>
+		
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+		<link rel="manifest" href="images/site.webmanifest">
+		<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
-		<div class="container">
-			<div class="greeting-container">
-				<div class="welcome-text">Welcome.</div>
+		<div class="grid">
+			<div class="container">
+				<div class="greeting-container">
+					<div class="welcome-text">Welcome.</div>
+				</div>
 			</div>
-			<div class="image-container">
-				<img src="images/sun_cloud.png" />
+			<div class="container">
+				<div class="search-container">
+					<input id="search" type="text" name="search-query" onkeypress="return searchRequest(event)"/>
+				</div>
 			</div>
-			<div class="date-container">
-				<div id="month-year"></div>
-				<div id="day-date"></div>
-				<div id="time"></div>
+			<div class="container">
+				<div class="time-container">
+					<div id="time"></div>
+				</div>
+				<div class="image-container container-pos-spacer">
+					<img src="images/sun_cloud.png" />
+				</div>
+				<div class="date-container">
+					<div id="month-year"></div>
+					<div id="day-date"></div>
+				</div>
 			</div>
+			<!--<div class="container">
+				<div class="time-container">
+					<div id="time"></div>
+				</div>
+			</div>
+			<div class="container container-neg-spacer">
+				<div class="greeting-container container-pos-spacer">
+					<div class="welcome-text">Welcome.</div>
+				</div>
+				<div class="image-container container-pos-spacer">
+					<img src="images/sun_cloud.png" />
+				</div>
+			</div>
+			<div class="container">
+				<div class="date-container">
+					<div id="month-year"></div>
+					<div id="day-date"></div>
+				</div>
+			</div>-->
 		</div>
 	</body>
 </html>
